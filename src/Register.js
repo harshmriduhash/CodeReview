@@ -1,14 +1,27 @@
 // src/Register.js
 
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle registration logic (e.g., make API request)
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/register', {
+        email,
+        password
+      });
+      console.log('Registration successful:', response.data);
+      // Redirect to login page upon successful registration
+      // Replace '/login' with the desired route
+      window.location.href = '/login';
+    } catch (error) {
+      console.error('Registration failed:', error);
+      // Handle registration error (e.g., display error message to user)
+    }
   };
 
   return (
