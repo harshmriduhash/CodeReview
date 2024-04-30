@@ -14,7 +14,7 @@ The Code Review Tool is a web application designed to streamline the code review
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/yourusername/code-review-tool.git
+git clone https://github.com/harshmriduhash/CodeReview
 
 2. Navigate to the project directory:
 cd code-review-tool
