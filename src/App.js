@@ -11,8 +11,11 @@ const App = () => {
     <Router>
       <Layout>
         <Switch>
+          {/* Route for login page */}
           <Route path="/login" component={Login} />
+          {/* Route for register page */}
           <Route path="/register" component={Register} />
+          {/* Add more routes for other pages/components */}
         </Switch>
       </Layout>
     </Router>
